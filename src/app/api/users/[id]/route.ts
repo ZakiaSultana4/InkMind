@@ -4,8 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 // This must be async to properly await `params`
 export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } }
+ req: NextRequest, { params }: { params: Promise<{ id: string }> }
 ) {
   await connectToDatabase();
 

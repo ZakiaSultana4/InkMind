@@ -7,7 +7,7 @@ import NavbarClient from "@/components/shared/NavbarClient";  // client wrapper 
 import Footer from "@/components/shared/Footer";
 
 export const metadata: Metadata = {
-    title: "LWS Kart",
+    title: "Ink Mind",
     description: "An online shop brought to you by Learn With Sumit",
 };
 

@@ -28,8 +28,12 @@ const EditPostPage = () => {
     e.preventDefault();
 
     try {
+      if (typeof postId !== 'string') {
+        alert('Invalid post ID.');
+        return;
+      }
       await updatePost({
-        id: postId,
+        postId,
         data: {
           title,
           content,

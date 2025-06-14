@@ -1,15 +1,14 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { connectToDatabase } from '@/lib/db/mongoose';
 import PostModel from '@/models/Post.model';
 
 // correct async function signature
 export async function GET(
-  request: Request,
-  context: { params: { authorId: string } }
+req: NextRequest, { params }: { params: Promise<{ authorId: string }> }
 ) {
   try {
     // ✅ await context.params in App Router
-    const { authorId } = await context.params;
+    const { authorId } = await params;
 
 
     await connectToDatabase();

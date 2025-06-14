@@ -39,15 +39,16 @@ const Navbar = () => {
   return (
     <div className="w-[98%] mx-auto flex items-center justify-between bg-white border-b py-4">
       {/* Left Section */}
-      <div className="flex items-center">
-        {/* Mobile Menu - omitted for brevity */}
-        <Link
-          href="/"
-          className="ml-4 text-xl font-semibold text-gray-800 hover:text-gray-600"
-        >
-          Blog AI
-        </Link>
-      </div>
+    <div className="flex items-center">
+  <Link
+    href="/"
+    className="ml-4 text-3xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 hover:from-pink-500 hover:to-indigo-500 transition-all duration-500"
+    aria-label="InkMind Home"
+  >
+    InkMind
+  </Link>
+</div>
+
 
       {/* Center Menu */}
       <div className="hidden lg:flex">

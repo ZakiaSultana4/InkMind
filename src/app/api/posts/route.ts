@@ -19,8 +19,8 @@ export const GET = async (req: Request) => {
 
     if (search) {
       query.$or = [
-        { title: { $regex: search, $options: 'i' } },
-        { content: { $regex: search, $options: 'i' } },
+        // { title: { $regex: search, $options: 'i' } },
+        // { content: { $regex: search, $options: 'i' } },
         { tags: { $elemMatch: { $regex: search, $options: 'i' } } },
       ];
     }

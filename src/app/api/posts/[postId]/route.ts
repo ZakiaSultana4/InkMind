@@ -27,26 +27,36 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ post
   return NextResponse.json(post, { status: 200 });
 }
 // DELETE post by ID
-export async function DELETE(req: NextRequest, { params }: { params: { postId: string } }) {
-  try {
-    await connectToDatabase();
-    await PostModel.findByIdAndDelete(params.postId);
 
-    return NextResponse.json({ message: 'Post deleted successfully' });
-  } catch (error) {
-    console.error(error);
-    return NextResponse.json({ message: 'Failed to delete post' }, { status: 500 });
+
+
+
+export async function DELETE(req: NextRequest, { params }: { params: Promise<{ postId: string }> }) {
+
+    await connectToDatabase();
+
+  const { postId } = await params;  // await here!
+   const post= await PostModel.findByIdAndDelete(postId);
+
+
+    if (post) {
+        return NextResponse.json({ message: 'Post deleted successfully' });
   }
+    if (!post) {
+    return NextResponse.json({ message: 'Post not found' }, { status: 404 });
+  }
+
+  return NextResponse.json(post, { status: 200 });
 }
 
 // PATCH update post by ID
 
-export async function PATCH(req: NextRequest, { params }: { params: { postId: string } }) {
+export async function PATCH(req: NextRequest, { params }: { params: Promise<{ postId: string }> }) {
   try {
     const body = await req.json();
     await connectToDatabase();
 
-    const { postId } =await params;
+    const { postId } = await params;
 
 
     // ✅ Validate ObjectId
