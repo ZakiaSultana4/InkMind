@@ -59,3 +59,32 @@ To get a local copy up and running, follow these simple steps:
 # Clone the repository
 git clone https://github.com/your-username/inkmind.git
 cd inkmind
+
+## 🧩 Installation
+
+### Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+
+### Create a `.env` file in the root directory and add the following environment variables:
+
+```bash
+DATABASE_URL=your_mongo_or_postgres_connection_string
+NEXTAUTH_SECRET=your_auth_secret
+NEXTAUTH_URL=http://localhost:3000
+GEMINI_API_KEY=your_ai_api_key
+
+### Then, start the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+
+## The app will be running at http://localhost:3000
+
+
+
