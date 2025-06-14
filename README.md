@@ -51,6 +51,31 @@ Welcome to **InkMind**, your intelligent blog assistant platform! Built with **N
 
 ---
 
+## 📄 API Routes
+
+All backend endpoints are powered by **Next.js API Routes** and consumed via **RTK Query**.
+
+| Endpoint            | Method         | Description               |
+| ------------------- | -------------- | ------------------------- |
+| `/api/auth/*`       | GET/POST       | Authentication handlers   |
+| `/api/posts`        | GET/POST       | Create or list blog posts |
+| `/api/posts/[id]`   | GET/PUT/DELETE | View, update, delete      |
+| `/api/comments`     | POST           | Add comment to a post     |
+| `/api/ai/summarize` | POST           | Generate summary via AI   |
+| `/api/ai/tags`      | POST           | Auto-suggest tags         |
+
+
+## 🧪 Usage
+
+Here's how users can interact with the platform:
+
+- ✍️ **Write Blog** – Create blog content using the built-in editor with AI-powered suggestions for text and tags via OpenRouter.
+- 📂 **My Blogs** – View a list of all blog posts authored by the currently logged-in user.
+- 🤖 **AI Features** – Automatically generate summaries and suggested tags for your blog post content using OpenRouter integration.
+- 🔎 **Search** – Quickly find blog posts by typing keywords in the title or tags.
+- 🙍‍♂️ **User Profiles** – View user bios and browse their published blog posts.
+
+
 ## 🧑‍💻 Getting Started
 
 To get a local copy up and running, follow these simple steps:
