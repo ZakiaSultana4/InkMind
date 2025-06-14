@@ -46,7 +46,7 @@ Welcome to **InkMind**, your intelligent blog assistant platform! Built with **N
 | Backend        | Next.js API Routes       |
 | Database       | MongoDB                  |
 | Authentication | NextAuth                 |
-| AI Integration | OpenAi(OPENROUTER)       |
+| AI Integration | OpenAI via OpenRouter    |
 | Deployment     | Vercel                   |
 
 ---
