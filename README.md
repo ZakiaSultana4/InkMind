@@ -44,9 +44,9 @@ Welcome to **InkMind**, your intelligent blog assistant platform! Built with **N
 | Frontend       | Next.js, React           |
 | State Mgmt     | Redux Toolkit + RTK Query|
 | Backend        | Next.js API Routes       |
-| Database       | MongoDB or PostgreSQL    |
-| Authentication | NextAuth / Clerk / Kinde |
-| AI Integration | Gemini API (or similar)  |
+| Database       | MongoDB                  |
+| Authentication | NextAuth                 |
+| AI Integration | OpenAi(OPENROUTER)       |
 | Deployment     | Vercel                   |
 
 ---
@@ -72,10 +72,15 @@ yarn install
 ### Create a `.env` file in the root directory and add the following environment variables:
 
 ```bash
-DATABASE_URL=your_mongo_or_postgres_connection_string
-NEXTAUTH_SECRET=your_auth_secret
-NEXTAUTH_URL=http://localhost:3000
-GEMINI_API_KEY=your_ai_api_key
+GITHUB_ID=
+GITHUB_SECRET=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+NEXTAUTH_SECRET=
+NEXTAUTH_URL=
+MONGODB_URI=
+OPENROUTER_API_KEY=
+
 ```
 ### Then, start the development server:
 
